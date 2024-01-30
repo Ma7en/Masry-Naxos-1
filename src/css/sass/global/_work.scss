@@ -1,0 +1,76 @@
+.work {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: var(--top-margin);
+        .box {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 40px 0 rgb(0 0 0 / 6%);
+            padding: 50px 45px;
+            border-radius: 6px;
+            background-color: var(--card-bg);
+            transition: var(--main-transition) ease-in-out;
+            &:hover {
+                background-color: var(--main-color);
+                transform: translateY(-10px);
+                box-shadow: 0 0 40px 0 rgb(0 0 0 / 20%);
+                transition: var(--main-transition) ease-in-out;
+            }
+            h3 {
+                font-size: 20px;
+                font-weight: bold;
+                margin: 0;
+                color: var(--font-color-black);
+                transition: var(--main-transition) ease-in-out;
+            }
+            p {
+                line-height: var(--main-line-height);
+                color: var(--text-color);
+                transition: var(--main-transition) ease-in-out;
+            }
+            &:hover {
+                h3,
+                p {
+                    color: #fff;
+                    transition: var(--main-transition) ease-in-out;
+                }
+            }
+            span {
+                width: 80px;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+                background-color: var(--main-color);
+                border-radius: 50%;
+                transition: var(--main-transition) ease-in-out;
+                .i {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 35px;
+                    // margin: 0 auto 25px;
+                    color: white;
+                    transition: var(--main-transition) ease-in-out;
+                }
+            }
+            &:hover {
+                span {
+                    background-color: white;
+                    transition: var(--main-transition) ease-in-out;
+                    .i {
+                        color: var(--main-color);
+                        transition: var(--main-transition) ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,203 @@
+/* === start reyset === */
+@import "sass/global/reyset";
+
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    // height: 5000px;
+    position: relative;
+}
+
+:root {
+    --main-color: #7c4fe0;
+    --hover-butten: #5f36bb;
+    --heading-Color: #111;
+    --text-color: #999;
+    --section-background: #fafbfe;
+    --section-background-2: #fafbfe;
+    
+    // ==>
+    --font-color-black: #000;
+    --color-gray: #666;
+    
+    --main-line-height: 1.8;
+    --top-margin: 60px;
+    --section-padding: 100px;
+    // my
+    --main-transition: all 0.5s;
+    --transition-1: all 1s;
+    --padding-sc-50: 50px;
+    --padding-sc-100: 50px;
+
+    --icon-color: hsl(234, 12%, 24%);
+    --container-color: hsl(234, 100%, 99%);
+
+    --shadow-1: 0px 0px 20px #0000001a;
+    --shadow-2: 0 0 20px 4px #0000000d;
+
+    // ===>
+    --card-bg: #fff;
+}
+
+body.dark_mode {
+    /* --main-color: #d6602a; */
+    // --second-color: #fff;
+    // --font-color: #212f3d;
+    // --bg-color: #212f3d;
+    // --bg-white: #151515;
+
+    // --main-color: #f5b041;
+    // --main-color: #3498db;
+    // --secondray-color: #85c1e9;
+    // --section-bg-color: #151515;
+    // --sec2-bg-color: #212f3d;
+    // --card-bg: #212f3d;
+    // --card2-bg: linear-gradient(
+    //     135deg,
+    //     var(--main-color),
+    //     var(--section-bg-color),
+    //     var(--sec2-bg-color)
+    // );
+    // --overlay: #151515;
+    // --font-color: #ffffffdb;
+    // --font2-color: #e2dcdccc;
+    // --box-shadow-btn: 1px 1px 2px 1px #f7f8fc;
+
+    // y
+    --main-color: #7c4fe0;
+    --hover-butten: #5f36bb;
+    --heading-Color: #fafaff;
+    --text-color: #e2dcdccc;
+
+    // ==>
+    --font-color-black: #fff;
+
+    //
+    --section-background: #151515;
+    --section-background-2: #212f3d;
+
+    // m
+    --icon-color: hsl(234, 12%, 24%);
+    --container-color: #fafaff;
+
+    --shadow-1: 0px 0px 20px #0000001a;
+    --shadow-2: 0 0 20px 4px #dedce230;
+    // --shadow-2: 0 0 20px 4px #fafaff;
+
+    // ===>
+    --card-bg: #212f3d;
+    --color-gray: #e2dcdccc;
+
+    background-color: #151515;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+// icons
+/* start goicon */
+@import "sass/global/goicon";
+
+/* start error */
+@import "sass/global/global";
+
+/* start error */
+@import "sass/global/errorpage";
+
+/* start header */
+@import "sass/global/header";
+
+/* start lading */
+@import "sass/global/landing";
+
+/* start sponsored */
+@import "sass/global/sponsored";
+
+/* start features */
+@import "sass/global/features";
+
+/* start video */
+@import "sass/global/video";
+
+/* start work */
+@import "sass/global/work";
+
+/* start tracking */
+@import "sass/global/tracking";
+
+/* start Reviews */
+@import "sass/global/reviews";
+
+/* start static */
+@import "sass/global/static";
+
+/* start ourteam */
+@import "sass/global/ourteam";
+
+/* start portfolio */
+@import "sass/global/portfolio";
+
+/* start questions */
+@import "sass/global/questions";
+
+/* start subscribe */
+@import "sass/global/subscribe";
+
+/* start blog */
+@import "sass/global/blogs";
+
+/* start pricing */
+@import "sass/global/pricing";
+
+/* start mobile */
+@import "sass/global/mobile";
+
+/* start contact */
+@import "sass/global/contact";
+
+/* start footer */
+@import "sass/global/footer";
+
+// @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* ========== start media Queries =============== */
+
+/* start max 767px */
+@media (max-width: 767px) {
+}
+
+/* start min 768 */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* start max 991 */
+@media (max-width: 991px) {
+}
+
+/* start min 992 */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* start min 1200 */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* ========== end media Queries =============== */

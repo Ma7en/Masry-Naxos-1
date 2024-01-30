@@ -1,0 +1,145 @@
+.blogs {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    > .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: var(--top-margin);
+        .srv-box {
+            box-shadow: var(--shadow-2);
+            border-radius: 10px;
+            .image {
+                overflow: hidden;
+                // margin-bottom: 30px;
+                position: relative;
+                border-radius: 10px;
+                transition: var(--main-transition);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 0;
+                    height: 0;
+                    background-color: rgb(255 255 255 / 50%);
+                    opacity: 0;
+                    z-index: 2;
+                    transition: var(--main-transition);
+                }
+                img {
+                    max-width: 100%;
+                    display: block;
+                    transition: var(--main-transition);
+                    
+                }
+                .description {
+                    position: absolute;
+                    width: 110px;
+                    height: 30px;
+                    top: 20px;
+                    left: 20px;
+                    transition: var(--main-transition);
+                    button {
+                        border: none;
+                        border-radius: 6px;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        color: #fff;
+                        font-size: 14px;
+                        font-weight: bold;
+                        padding: 5px 8px;
+                        transition: var(--main-transition);
+                    }
+                }
+            }
+            &:hover .image img {
+                transform: scale(1.08);
+                transition: var(--main-transition);
+            }
+            &:hover .image::before {
+                animation: flashing 1.5s;
+                transition: var(--main-transition);
+            }
+            @keyframes flashing {
+                0%,
+                40% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                    width: 150%;
+                    height: 150%;
+                    border-radius: 10px;
+                }
+            }
+            &:hover .image .description button {
+                background-color: var(--main-color);
+                transition: var(--main-transition);
+            }
+            .content {
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .date {
+                    color: var(--main-color);
+                    transition: var(--main-transition);
+                    &:hover {
+                        color: #000;
+                        transition: var(--main-transition);
+                    }
+                    span {
+                        color: var(--text-color);
+                    }
+                }
+                .text {
+                    h2 {
+                        color: var(--font-color-black);
+                        transition: var(--main-transition);
+                        &:hover {
+                            color: var(--main-color);
+                            cursor: pointer;
+                            transition: var(--main-transition);
+                        }
+                    }
+                    p {
+                        color: var(--text-color);
+                        line-height: 1.6;
+                    }
+                }
+                .read {
+                    font-weight: bold;
+                    position: relative;
+                    color: var(--main-color);
+                    transition: var(--main-transition);
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: 8px;
+                        left: 0;
+                        width: 0px;
+                        height: 1px;
+                        background-color: #000;
+                        transition: var(--main-transition);
+                    }
+                }
+                &:hover .read {
+                    color: #000;
+                    padding-left: 20px;
+                    transition: var(--main-transition);
+                }
+                &:hover .read::before {
+                    width: 15px;
+                    transition: var(--main-transition);
+                }
+            }
+        }
+    }
+}
+body.dark_mode .blogs > .container .srv-box .content:hover .read {
+    color: #e2dcdccc;
+}
+.blogs > .container .srv-box .content .read::before {
+    background-color: #e2dcdccc;
+}

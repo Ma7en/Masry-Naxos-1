@@ -1,0 +1,210 @@
+.tracking {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+    .container {
+        > div {
+            display: flex;
+            justify-content: space-between;
+            @media (max-width: 767px) {
+                flex-direction: column;
+            }
+            img {
+                width: 450px;
+                height: 550px;
+                @media (max-width: 991px) {
+                    width: 40%;
+                    height: 40%;
+                }
+                @media (max-width: 767px) {
+                    width: 80%;
+                    height: 80%;
+                    margin: 30px auto;
+                }
+            }
+        }
+
+        .track-content {
+            margin-bottom: 100px;
+            .time {
+                flex-basis: 50%;
+                .heading {
+                    text-align: center;
+                    margin-bottom: var(--top-margin);
+                    h2 {
+                        font-size: 36px;
+                        font-weight: bold;
+                        margin: 0;
+                        color: var(--font-color-black);
+                    }
+                    p {
+                        font-size: 18px;
+                        line-height: var(--main-line-height);
+                        margin: 15px 0 0;
+                        color: var(--text-color);
+                    }
+                }
+                .box {
+                    transition: var(--main-transition);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .srv-box {
+                        box-shadow: 0 0 20px 0 rgb(0 0 0 / 6%);
+                        padding: 15px 25px;
+                        background-color: var(--card-bg);
+                        border-radius: 6px;
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        cursor: pointer;
+                        transition: var(--main-transition);
+                        &:hover {
+                            background-color: var(--main-color);
+                            transform: translateX(-10px);
+                            box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%);
+                            transition: var(--main-transition);
+                        }
+                        > span {
+                            background-color: var(--main-color);
+                            color: white;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            transition: var(--main-transition);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .i {
+                                // margin-right: 20px;
+                                // text-align: center;
+                                // padding: 15px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 25px;
+                                transition: var(--main-transition);
+                            }
+                        }
+                        &:hover span {
+                            transition: var(--main-transition);
+                            background-color: white;
+                            .i {
+                                color: var(--main-color);
+                                transition: var(--main-transition);
+                            }
+                        }
+                        .text {
+                            flex: 1;
+                            transition: var(--main-transition);
+                            margin-top: 10px;
+                            h3 {
+                                font-size: 18px;
+                                margin: 0;
+                                color: var(--font-color-black);
+                                transition: var(--main-transition);
+                            }
+                            p {
+                                color: var(--text-color);
+                                font-size: 15px;
+                                line-height: 1.7;
+                                margin: 10px 0 15px;
+                                transition: var(--main-transition);
+                            }
+                        }
+                        &:hover {
+                            .text {
+                                h3,
+                                p {
+                                    color: white;
+                                    transition: var(--main-transition);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .daily-schdule {
+            .built {
+                flex-basis: 50%;
+                .heading {
+                    text-align: center;
+                    margin-bottom: var(--top-margin);
+                    h2 {
+                        font-size: 36px;
+                        font-weight: bold;
+                        margin: 0;
+                        color: var(--font-color-black);
+                    }
+                    p {
+                        font-size: 18px;
+                        line-height: var(--main-line-height);
+                        margin: 15px 0 0;
+                        color: var(--text-color);
+                    }
+                }
+                ul {
+                    li {
+                        padding: 15px 0;
+                        line-height: 1.7;
+                        color: var(--color-gray);
+                        font-size: 15px;
+                        position: relative;
+                        @media (max-width: 767px) {
+                            padding: 15px 20px;
+                        }
+                        > .i {
+                            position: absolute;
+                            left: -30px;
+                            // top: 10px;
+                            font-weight: 900;
+                            color: var(--main-color);
+                            @media (max-width: 767px) {
+                                left: -5px;
+                            }
+                        }
+                    }
+                }
+                a {
+                    display: block;
+                    border: 1px solid var(--main-color);
+                    border-radius: 6px;
+                    color: white;
+                    font-weight: 500;
+                    background-color: var(--main-color);
+                    width: fit-content;
+                    padding: 15px 30px;
+                    margin: 30px auto 0;
+                    transition: var(--main-transition);
+                    &:hover {
+                        background-color: var(--hover-butten);
+                        border-color: var(--hover-butten);
+                    }
+                }
+            }
+        }
+        // .track-content,
+        // .daily-schdule {
+        //     .time,
+        //     .built {
+        //         flex-basis: 50%;
+        //         .heading {
+        //             text-align: center;
+        //             margin-bottom: var(--top-margin);
+        //             h2 {
+        //                 font-size: 36px;
+        //                 font-weight: bold;
+        //                 margin: 0;
+        //             }
+        //             p {
+        //                 font-size: 18px;
+        //                 line-height: var(--main-line-height);
+        //                 margin: 15px 0 0;
+        //                 color: var(--text-color);
+        //             }
+        //         }
+        //     }
+        // }
+    }
+}

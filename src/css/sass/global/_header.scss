@@ -1,0 +1,162 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+    box-shadow: var(--shadow-1);
+    padding: 5px 0px;
+    &.open {
+        position: fixed;
+        transform: translateY(-100%);
+        background-color: var(--main-color);
+        filter: drop-shadow(var(--shadow-1));
+        animation: slideIn 0.5s ease forwards;
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    > .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 70px;
+        position: relative;
+        .logo {
+            user-select: none;
+            pointer-events: none;
+        }
+
+        nav {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 10;
+            #toggle-menu {
+                display: none;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 30px;
+                cursor: pointer;
+                z-index: 15;
+                user-select: none;
+                @media (max-width: 991px) {
+                    display: flex;
+                }
+                &.fa-times {
+                    // color: var(--theme-color-primary);
+                    transition: var(--main-transition);
+                    transform: rotate(180deg);
+                }
+            }
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+                transition: var(--main-transition) ease-in-out;
+                @media (max-width: 991px) {
+                    display: none;
+                }
+                li {
+                    position: relative;
+                    a {
+                        display: flex;
+                        // padding: 40px 20px;
+                        color: white;
+                        font-weight: 500;
+                        position: relative;
+                        cursor: pointer;
+                        padding-bottom: 10px;
+                        transition: var(--main-transition) ease-in-out;
+                        &::before,
+                        &.active::before {
+                            content: "";
+                            position: absolute;
+                            height: 2px;
+                            // bottom: 38px;
+                            bottom: 0;
+                            left: 0;
+                            background-color: #9683df;
+                            transition: var(--main-transition) ease-in-out;
+                            @media (max-width: 991px) {
+                                transition: var(--transition-1) ease-in-out;
+                            }
+                        }
+                        &::before {
+                            width: 0%;
+                            transition: var(--main-transition) ease-in-out;
+                        }
+                        &.active::before,
+                        &:hover::before {
+                            width: calc(100%);
+                            transition: var(--main-transition) ease-in-out;
+                        }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 50%;
+                            bottom: -1.5px;
+                            width: 5px;
+                            height: 5px;
+                            border-radius: 50%;
+                            transform: translateX(-50%);
+                            transition: var(--main-transition) ease-in-out;
+                        }
+                        &.active::after {
+                            transition: var(--main-transition) ease-in-out;
+                            background-color: #fff;
+                        }
+                    }
+                }
+                &.open {
+                    @media (max-width: 991px) {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0px;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                        background-color: var(--main-color);
+                        li {
+                            width: 100%;
+                            padding: 5px 10px;
+                            position: relative;
+                            a {
+                                // padding: 15px !important;
+                                // color: var(--heading-Color);
+                                width: 100%;
+                                padding: 10px 0px;
+                                transition: var(--transition-1) ease-in-out;
+                                &::after {
+                                    left: 2%;
+                                }
+                                &.active::before,
+                                &:hover::before {
+                                    width: calc(100%);
+                                    transition: var(--transition-1) ease-in-out;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .form {
+                margin-left: 20px;
+                i {
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

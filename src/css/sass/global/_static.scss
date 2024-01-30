@@ -1,0 +1,51 @@
+.static {
+    background-image: url("../../../images/static/counters-1.jpg");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+    user-select: none;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgb(17, 17, 17, 70%);
+    }
+    > .container {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        .box {
+            padding: 50px;
+            text-align: center;
+            @media (max-width: 767px) {
+                flex-basis: 100%;
+                padding: 25px;
+            }
+            @media (min-width: 768px) {
+                flex-basis: 50%;
+            }
+            @media (min-width: 992px) {
+                flex-basis: 25%;
+            }
+            .i {
+                font-size: 40px;
+                margin-top: 30px;
+                color: white;
+            }
+            .number {
+                font-size: 40px;
+                font-weight: 600;
+                margin: 30px auto;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
